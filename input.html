@@ -14,7 +14,7 @@
                     <p>Answer the required questions, and you will be provided with results and an analysis. At any step of the process, the inputs can be changed, allowing for a ‘what-if’ comparative analysis of various scenarios. </p>
                     <!-- Tabs -->
                     
-                    <div smart-wizard class="form_wizard wizard_horizontal">
+                    <div smart-wizard collapse-question class="form_wizard wizard_horizontal">
                       <ul class="wizard_steps">
                         <li>
                           <a href="#step-1">
@@ -50,21 +50,21 @@
                                 </div>
                                 <div class="q_content">
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-1">1. No of Simple Apps <small>(Apps with &lt; 200GB data, Desktop Apps/small Enterprise Apps/Internal Apps, Less than 100 users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-1">No of Simple Apps <a data-toggle="tooltip" data-placement="top" title="Apps with &lt; 200GB data, Desktop Apps/small Enterprise Apps/Internal Apps, Less than 100 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input1-1" ng-model="input11" required="required" class="form-control col-md-7 col-xs-12" placeholder=0>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-2">No of Medium Apps <small>(E.g Apps with &lt; 1TB data,  Mid Size Apps, 500 users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-2">No of Medium Apps <a data-toggle="tooltip" data-placement="top" title="Apps with &lt; 1TB data, Mid Size Apps, Less than 500 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input1-2" ng-model="input12" required="required" class="form-control col-md-7 col-xs-12" placeholder=0>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-3">No of Complex Apps <small>(E.g Apps with &gt; 1TB data, Enterprise wide Apps, &gt; 1K users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input1-3">No of Complex Apps <a data-toggle="tooltip" data-placement="top" title="Apps with &gt; 1TB data, Enterprise Apps, Less than 1000 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input1-3" ng-model="input13" required="required" class="form-control col-md-7 col-xs-12" placeholder=0>
@@ -233,21 +233,24 @@
                                 </div>
                                 <div class="q_content">
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-1">No of Simple Apps <small>(Apps with &lt; 200GB data, Desktop Apps/small Enterprise Apps/Internal Apps, Less than 100 users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-1">No of Simple Apps 
+                                            <a data-toggle="tooltip" data-placement="top" title="Apps with &lt; 200GB data, Desktop Apps/small Enterprise Apps/Internal Apps, Less than 100 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input6-1" ng-model="input61" required="required" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-2">No of Medium Apps <small>(E.g Apps with &lt; 1TB data,  Mid Size Apps, 500 users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-2">No of Medium Apps
+                                            <a data-toggle="tooltip" data-placement="top" title="Apps with &lt; 1TB data, Mid Size Apps, Less than 500 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input6-2" ng-model="input62" required="required" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-3">No of Complex Apps <small>(E.g Apps with &gt; 1TB data, Enterprise wide Apps, &gt; 1K users)</small>
+                                        <label class="control-label col-md-9 col-sm-9 col-xs-12" for="input6-3">No of Complex Apps
+                                            <a data-toggle="tooltip" data-placement="top" title="Apps with &gt; 1TB data, Enterprise Apps, Less than 1000 users"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-12">
                                             <input type="text" id="input6-3" ng-model="input63" required="required" class="form-control col-md-7 col-xs-12">

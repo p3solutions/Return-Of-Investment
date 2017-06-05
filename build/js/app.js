@@ -1,4 +1,4 @@
-angular.module('input', ['ngRoute','firebase','returnOfInvestment.services','returnOfInvestment.directives','returnOfInvestment.controllers'])
+angular.module('input', ['ngRoute','firebase','returnOfInvestment.services','returnOfInvestment.directives','returnOfInvestment.controllers','returnOfInvestment.values'])
 .config(function($routeProvider) {
   $routeProvider
     .when('/input', {

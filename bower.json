@@ -9,12 +9,9 @@
     "css",
     "js",
     "html",
-    "template",
-    "admin",
     "bootstrap",
-    "theme",
-    "backend",
-    "responsive"
+    "responsive",
+    "angularjs"
   ],
   "devDependencies": {
     "jquery": "^2.2.3",

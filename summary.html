@@ -9,24 +9,8 @@
                     <div class="clearfix"></div>
                   </div>
                     <div class="x_content">
-                    <p>There are many benefits to archiving and decommissioning applications, and this calculator will highlight some of these benefits, including cost reductions, based on a variety of interactive inputs.</p>
-                    <p>Answer the required questions, and you will be provided with results and an analysis. At any step of the process, the inputs can be changed, allowing for a ‘what-if’ comparative analysis of various scenarios. </p>
                     <div>
-                        <h1 class="StepTitle">Summary of Inputs</h1>
-                        <h2 class="StepTitle">Legacy Application Decommissioning Use Case</h2>
-                          <p>This analysis includes a decommission-able application environment consisting of {{input11}} legacy applications which are, on average, {{input12}} years old, and which in total cost the organization {{input13}} annually in support and maintenance charges</p>
-                          <p>The infrastructure footprint to run these legacy applications includes {{input14}} mainframes and {{input15}} physical servers</p>
-                          <p>In total, there is assumed to be {{input16}} TBs associated with these applications residing on {{input17}} storage which is replicated. Weekly full backups are made of this data and are retained indefinitely</p>
-                        <h2 class="StepTitle">Active archive of Live Apps Use Case</h2>
-                          <p>This analysis includes an actively archived application environment consisting of {{input21}} live applications which are, on average, {{input22}} years old. The data from these applications is generally able to be archived after {{input23}} months.</p>
-                          <p>The server footprint to support these applications is growing at a rate of {{input24}} servers annually. It is estimated that through active archiving server growth can be reduced by {{input25}} and that each server added carries with it a {{input26}} application licensing cost.</p>
-                          <p>In total, there is assumed to be {{input27}} TBs associated with these applications residing on high-end storage which is replicated. Additionally, this data is assumed to be growing at a {{input210}} rate annually. Weekly full backups are made of this data and are retained indefinitely.</p>
-                        <h2 class="StepTitle">Additional Organization-wide Assumptions</h2>
-                          <p>This model assumes a disk-to-tape backup architecture leveraging {{input31}} disk backup appliances which are appropriately sized to meet a {{input32}} hour backup window (based on publicly available Data Domain specs).</p>
-                          <p>Aggregating all of the applications above, a total of {{input33+input34+input35}} retrieval requests are assumed to take place each year. Requests include those made by employees and customers, regulatory agencies, and those which are a part of legal e-discovery initiatives</p>
-                          <p>Finally that average annual salary for IT employees is estimated as {{input36}}</p>
-                        <h2 class="StepTitle">By analyzing these use cases and key environmental characteristics, this model provides estimates for the financial impact your organization could expect by investing in InfoArchive compared to the status quo. This analysis was compiled by Your name here. To discuss it further please contact me at Your email here or Your phone here.</h2>
-                        <h1 class="StepTitle">Summary of Results</h1>
+                        <h1 class="StepTitle">Summary</h1>
                         <h2 class="StepTitle">TCO and Incremental Benefit of InfoArchive vs. the Status Quo, Five-year Time Horizon</h2>
                         <!-- top tiles -->
                           <div class="row tile_count">
@@ -46,17 +30,51 @@
                               <span class="count_top"><i class="fa fa-user"></i> Archival License Costs</span>
                               <div class="count green">{{professionalServicesCost.startupProfessionalCosts}}</div>
                             </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                              <span class="count_top"><i class="fa fa-user"></i> Archival License Costs</span>
+                              <div class="count green">{{professionalServicesCost.startupProfessionalCosts}}</div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                              <span class="count_top"><i class="fa fa-user"></i> Archival License Costs</span>
+                              <div class="count green">{{professionalServicesCost.startupProfessionalCosts}}</div>
+                            </div>
                           </div>
                           <!-- /top tiles -->
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="x_panel">
                           <div class="x_title">
-                            <h2>Line Graph</h2>
+                            <h2>5 Year estimation of costs</h2>
                             <div class="clearfix"></div>
                           </div>
                           <div class="x_content">
 
-                            <div echart-wizard style="height:350px;" eoption="eoption"></div>
+                            <div echart-wizard style="height:370px;" eoption="eoption"></div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Estimated Total Size of XDB</h2>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+
+                            <div echart-pyramid style="height:370px;" pyramidoption="pyramidoption"></div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Sonar</h2>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+
+                            <div echart-sonar style="height:370px;" sonaroption="sonaroption"></div>
 
                           </div>
                         </div>

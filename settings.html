@@ -116,6 +116,133 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <h2 class="StepTitle">Parameters</h2>
+                            <div class="docs-data">
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataX">IA License cost per TB</label>
+                                  <input type="text" class="form-control" id="startup-licensing-cost" ng-model="parameters.iaLicenseCostPerTB">
+                                  <span class="input-group-addon">$</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataY">IA Maintenance cost per year</label>
+                                  <input type="text" class="form-control" id="year1" ng-model="parameters.iaLicenseCostPerYear">
+                                  <span class="input-group-addon">%</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataWidth">MDT Infra cost per TB (Stage + Prod)</label>
+                                  <input type="text" class="form-control" id="year2" ng-model="parameters.mdtInfraCostPerTB">
+                                  <span class="input-group-addon">$</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataHeight">Storage estimate to column D range</label>
+                                  <input type="text" class="form-control" id="year3" ng-model="parameters.storageEstimatetoDataSizeRange">
+                                  <span class="input-group-addon">%</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataRotate">Labor cost per hour</label>
+                                  <input type="text" class="form-control" id="year4" ng-model="parameters.laborCostPerHour">
+                                  <span class="input-group-addon">$</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataRotate">Support cost per hour</label>
+                                  <input type="text" class="form-control" id="year4" ng-model="parameters.supportCostPerHour">
+                                  <span class="input-group-addon">%</span>
+                                </div>
+                                <div class="input-group input-group-sm">
+                                  <label class="input-group-addon" for="dataRotate">Infrastructure cost</label>
+                                  <input type="text" class="form-control" id="year4" ng-model="parameters.infraCost">
+                                  <span class="input-group-addon">%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <h2 class="StepTitle">Complexity Assumptions</h2>
+                            <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                                <ul id="doccount" class="nav nav-tabs bar_tabs right" role="tablist">
+                                    <li role="presentation" ng-class="{'active' : activeTab == 1}"><a href="" ng-click="setActiveTab(1)" id="simpleapps-tab" role="tab" data-toggle="tab" aria-controls="simpleapps" aria-expanded="true">Simple Apps</a>
+                                    </li>
+                                    <li role="presentation" ng-class="{'active' : activeTab == 2}"><a href="" ng-click="setActiveTab(2)" role="tab" id="mediumapps-tab" data-toggle="tab" aria-controls="mediumapps" aria-expanded="false">Medium Apps</a>
+                                    </li>
+                                    <li role="presentation" ng-class="{'active' : activeTab == 3}"><a href="" ng-click="setActiveTab(3)" role="tab" id="complexapps-tab" data-toggle="tab" aria-controls="complexapps" aria-expanded="false">Complex Apps</a>
+                                    </li>
+                                </ul>
+                                <div id="doccountTabContent" class="tab-content">
+                                    <div role="tabpanel" ng-class="{'tab-pane fade active in':activeTab === 1,'tab-pane fade' : activeTab !== 1}" id="tab_content71" aria-labelledby="simpleapps-tab">
+                                        <div class="docs-data">
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estArchServEffortPerApp">Estimated Archival Service Effort per app</label>
+                                              <input type="text" class="form-control" id="estArchServEffortPerApp" ng-model="lowComplexityParams.estArchServEffortPerApp">
+                                              <span class="input-group-addon">$</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="dataSize">Data Size</label>
+                                              <input type="text" class="form-control" id="dataSize" ng-model="lowComplexityParams.dataSize">
+                                              <span class="input-group-addon">GB</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="noOfUsers">No.of Users</label>
+                                              <input type="text" class="form-control" id="noOfUsers" ng-model="lowComplexityParams.noOfUsers">
+                                              <span class="input-group-addon">users</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estScreensPerApp">Estimated Screens per app</label>
+                                              <input type="text" class="form-control" id="estScreensPerApp" ng-model="lowComplexityParams.estScreensPerApp">
+                                              <span class="input-group-addon">per app</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" ng-class="{'tab-pane fade active in':activeTab === 2,'tab-pane fade' : activeTab !== 2}" id="tab_content72" aria-labelledby="mediumapps-tab">
+                                        <div class="docs-data">
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estArchServEffortPerApp">Estimated Archival Service Effort per app</label>
+                                              <input type="text" class="form-control" id="estArchServEffortPerApp" ng-model="medComplexityParams.estArchServEffortPerApp">
+                                              <span class="input-group-addon">$</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="dataSize">Data Size</label>
+                                              <input type="text" class="form-control" id="dataSize" ng-model="medComplexityParams.dataSize">
+                                              <span class="input-group-addon">GB</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="noOfUsers">No.of Users</label>
+                                              <input type="text" class="form-control" id="noOfUsers" ng-model="medComplexityParams.noOfUsers">
+                                              <span class="input-group-addon">users</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estScreensPerApp">Estimated Screens per app</label>
+                                              <input type="text" class="form-control" id="estScreensPerApp" ng-model="medComplexityParams.estScreensPerApp">
+                                              <span class="input-group-addon">per app</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" ng-class="{'tab-pane fade active in':activeTab === 3,'tab-pane fade' : activeTab !== 3}" id="tab_content73" aria-labelledby="complexapps-tab">
+                                        <div class="docs-data">
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estArchServEffortPerApp">Estimated Archival Service Effort per app</label>
+                                              <input type="text" class="form-control" id="estArchServEffortPerApp" ng-model="highComplexityParams.estArchServEffortPerApp">
+                                              <span class="input-group-addon">$</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="dataSize">Data Size</label>
+                                              <input type="text" class="form-control" id="dataSize" ng-model="highComplexityParams.dataSize">
+                                              <span class="input-group-addon">GB</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="noOfUsers">No.of Users</label>
+                                              <input type="text" class="form-control" id="noOfUsers" ng-model="highComplexityParams.noOfUsers">
+                                              <span class="input-group-addon">users</span>
+                                            </div>
+                                            <div class="input-group input-group-sm">
+                                              <label class="input-group-addon" for="estScreensPerApp">Estimated Screens per app</label>
+                                              <input type="text" class="form-control" id="estScreensPerApp" ng-model="highComplexityParams.estScreensPerApp">
+                                              <span class="input-group-addon">per app</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                   </div>
                 </div>

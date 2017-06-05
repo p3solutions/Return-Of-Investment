@@ -1,6 +1,26 @@
 angular.module('returnOfInvestment.services', [])
-.factory('firebaseDB', function(){
-    return firebase.database().ref();
+.factory('firebaseDB', function($firebaseObject,$firebaseArray){
+    var ref = firebase.database().ref();
+    var firebaseDB = {};
+    
+    firebaseDB.getReference = function(){
+        return ref;
+    };
+    firebaseDB.getObject = function(object){
+        return $firebaseObject(ref.child(object));
+    };
+    firebaseDB.getArray = function(object){
+        return $firebaseArray(ref.child(object));
+    };
+    firebaseDB.getObjectPromise = function(object){
+        return $firebaseObject(ref.child(object)).$loaded();
+    };
+    firebaseDB.getArrayPromise = function(object){
+        return $firebaseArray(ref.child(object)).$loaded();
+    }
+    return firebaseDB;
+    
+    
 })
 .factory('shareService', function(){
     var resourceCost = 0;
